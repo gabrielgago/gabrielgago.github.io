@@ -14,57 +14,27 @@
 	</div>
 	<div class="area-efeito-conteudo">
 			<div class="gb-conteudo">
-			<div class="bt-modo-aviao"></div>
-			<div class="som som-mais"></div>
-			<div class="som som-menos"></div>
-			<div class="exec-program" onclick="executaJogoDaCobrinha();" hidden></div>
-			<nav class="gb-menu-navegacao">
-				<div class="gb-som-usuario"></div>
-			</nav>
-			<div class="gb-imagem-usuario">
-				<div class="loading">
-					<img src="loading.gif" style="height: 40px;">
-				</div>
-				<div class="autenticacao" hidden>
-					<div class="info-hora">
-						<span class="horario">
-							<script>
-								var hora = new Date();
-								var hour = String(hora.getHours());
-								var minute = String(hora.getMinutes());
-								document.write(
-									((hour.length == 1) ? '0'+hour : hour) + ':' + 
-									((minute.length == 1) ? '0'+minute : minute)
-									);
-								</script>
-							</span>
-						</div>
-						<div class="info-dono-celular">Iphone de Gabriel</div>
-						<div class="out-senha">
-							<span class="senha-out"></span>
-							<span class="senha-out"></span>
-							<span class="senha-out"></span>
-							<span class="senha-out"></span>
-						</div>
-						<div class="area-efeito-teclado">
-							<div class="teclado">
-								<button class="bt-senha">1</button>
-								<button class="bt-senha">2</button>
-								<button class="bt-senha">3</button>
-								<button class="bt-senha">4</button>
-								<button class="bt-senha">5</button>
-								<button class="bt-senha">6</button>
-								<button class="bt-senha">7</button>
-								<button class="bt-senha">8</button>
-								<button class="bt-senha">1</button>
-								<button class="bt-senha limpar">Limpar</button>
-								<button class="bt-senha">0</button>
-								<button class="bt-senha entrar">Entrar</button>
+				<div class="som som-mais"></div>
+				<div class="som som-menos"></div>
+				<div class="exec-program" onclick="executaJogoDaCobrinha();" hidden></div>
+				<nav class="gb-menu-navegacao">
+					<div class="gb-som-usuario"></div>
+				</nav>
+				<div class="gb-imagem-usuario">
+					<div class="bt-modo-aviao"></div>
+					<div class="tela tela-ligacao">
+						<div class="fundo-foto-usuario">
+							<div class="foto-usuario">
+								<!-- <img src="img-future.jpeg" alt=""> -->
 							</div>
 						</div>
+						<div class="lb-ligando">Ligando...</div>
 					</div>
-					<div class="home tela" hidden>
-						<div class="barra-informativa">
+					<div class="loading">
+						<img src="loading.gif" style="height: 40px;">
+					</div>
+					<div class="autenticacao" hidden>
+						<div class="info-hora">
 							<span class="horario">
 								<script>
 									var hora = new Date();
@@ -76,44 +46,79 @@
 										);
 									</script>
 								</span>
-								<span class="internet">
-									<img src="wifi.png">
-								</span>
-								<span class="sinal">
-									<img src="sinal-celular.png">
-								</span>
-								<span class="bateria">
-									<img src="batery.png">
-								</span>
 							</div>
-							<div class="corpo-tela">
-								<div class="dv-jogo">
-									<button class="bt-jogo" >
-									</button>
-									<span>Jogo</span>
+							<div class="info-dono-celular">Iphone de Gabriel</div>
+							<div class="out-senha">
+								<span class="senha-out"></span>
+								<span class="senha-out"></span>
+								<span class="senha-out"></span>
+								<span class="senha-out"></span>
+							</div>
+							<div class="area-efeito-teclado">
+								<div class="teclado">
+									<button class="bt-senha">1</button>
+									<button class="bt-senha">2</button>
+									<button class="bt-senha">3</button>
+									<button class="bt-senha">4</button>
+									<button class="bt-senha">5</button>
+									<button class="bt-senha">6</button>
+									<button class="bt-senha">7</button>
+									<button class="bt-senha">8</button>
+									<button class="bt-senha">1</button>
+									<button class="bt-senha limpar">Limpar</button>
+									<button class="bt-senha">0</button>
+									<button class="bt-senha entrar">Entrar</button>
 								</div>
 							</div>
-							<div class="menu-bts-acoes"></div>
 						</div>
-						<!-- <p id="clique-me" onclick="chamaMayquinho();" hidden><strong>Clique e veja seu futuro !</strong></p> -->
-						<div class="jogo-da-cobrinha tela" style="display: none;">
-							<div class="placar gols"><span>0</span></div>
-							<div class="placar defesas"><span>0</span></div>
-							<div class="bolinha" ></div>
-							<div class="cobrinha" ></div>
-							<div class="gol" ></div>
-						</div>
-				<!-- <img id="img" style="display: none;width: 100%;height: 100% !important;position:absolute;z-index: 1;" src="img-future.jpeg">
-					<img id="img-inicial" style="display: none;height: 361px;width: 100%;" src="tela-inicial-iphone.jpg"> -->
-				</div>
-				<div class="gb-menu-acoes">
-					<div class="gb-bt-principal" onclick="voltaMenuIniciar();">
-						<!-- <div class="gb-luz-bt-principal"></div> -->
+						<div class="home tela" hidden>
+							<div class="barra-informativa">
+								<span class="horario">
+									<script>
+										var hora = new Date();
+										var hour = String(hora.getHours());
+										var minute = String(hora.getMinutes());
+										document.write(
+											((hour.length == 1) ? '0'+hour : hour) + ':' + 
+											((minute.length == 1) ? '0'+minute : minute)
+											);
+										</script>
+									</span>
+									<span class="internet">
+										<img src="wifi.png">
+									</span>
+									<span class="sinal">
+										<img src="sinal-celular.png">
+									</span>
+									<span class="bateria">
+										<img src="batery.png">
+									</span>
+								</div>
+								<div class="corpo-tela">
+									<div class="dv-jogo">
+										<button class="bt-jogo" >
+										</button>
+										<span>Jogo</span>
+									</div>
+								</div>
+								<div class="menu-bts-acoes"></div>
+							</div>
+							<!-- <p id="clique-me" onclick="chamaMayquinho();" hidden><strong>Clique e veja seu futuro !</strong></p> -->
+							<div class="jogo-da-cobrinha tela" style="display: none;">
+								<div class="placar gols"><span>0</span></div>
+								<div class="placar defesas"><span>0</span></div>
+								<div class="bolinha" ></div>
+								<div class="cobrinha" ></div>
+								<div class="gol" ></div>
+							</div>
+					<!-- <img id="img" style="display: none;width: 100%;height: 100% !important;position:absolute;z-index: 1;" src="img-future.jpeg">
+						<img id="img-inicial" style="display: none;height: 361px;width: 100%;" src="tela-inicial-iphone.jpg"> -->
 					</div>
-				</div>
-			</div>
-			<div class="tela tela-ligacao">
-				
+					<div class="gb-menu-acoes">
+						<div class="gb-bt-principal" onclick="voltaMenuIniciar();">
+							<!-- <div class="gb-luz-bt-principal"></div> -->
+						</div>
+					</div>
 			</div>
 		</div>
 		<script>

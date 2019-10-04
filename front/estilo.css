@@ -455,3 +455,38 @@ body{
     cursor: pointer;
 }
 
+.tela-ligacao{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    left: 0px;
+    top: 0;
+    color: white;
+    font-size: larger;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 5%, rgba(51,51,99,1) 43%, rgba(0,212,255,1) 144%);
+}
+
+.foto-usuario{
+    height: 220px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lb-ligando{
+    display: flex;
+    justify-content: center;
+}
+
+.fundo-foto-usuario{
+    border: 1px solid;
+    border-radius: 105px;
+    height: 198px;
+    margin: 21px;
+    background-color: #cacaca;
+}
