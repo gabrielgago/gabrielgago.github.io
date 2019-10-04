@@ -318,3 +318,114 @@ body{
     position: fixed;
     margin: 10px;
 }
+
+.autenticacao{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 5%, rgba(51,51,99,1) 43%, rgba(0,212,255,1) 144%);
+}
+
+.info-hora{
+    color: white;
+    font-size: -webkit-xxx-large;
+    display: block;
+    /* left: 27%; */
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+.teclado{
+    display: block;
+    top: 190px;
+    margin: 0;
+    height: 127px;
+    width: 90%;
+    box-sizing: border-box;
+    text-align: center;
+    left: 14px;
+}
+
+.teclado button{
+    margin:0;
+    padding: 0;
+    background: transparent;
+    width: 65px;
+    height: 30px;
+    transition: 0.5s;
+    color: white;
+    font-size: 17px;
+    opacity: 0.8;
+    border: transparent;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.teclado button:hover{
+    opacity: 1;
+    cursor: pointer;
+    background: rgba(0,212,255,0.2);
+}
+
+.info-dono-celular{
+    position: absolute;
+    top: 120px;
+    /* left: 76px; */
+    color: greenyellow;
+    font-size: small;
+    font-family: sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.out-senha{
+    top: 157px;
+    height: 26px;
+    width: 100%;
+    /*left: 72px;*/
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 212, 255, 0.06);
+}
+
+.senha-out{
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 32px;
+    opacity: 1 !important;
+    margin: 6px;
+}
+
+.senha-in{
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 32px;
+    opacity: 1 !important;
+    margin: 6px;
+}
+
+.area-efeito-teclado{
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

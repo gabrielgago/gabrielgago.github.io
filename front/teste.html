@@ -4,12 +4,13 @@
 	<title>Teste</title>
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.jrumble.1.3.js"></script>
 	<!-- <script type="text/javascript" src="dateformat.js"></script> -->
 </head>
 <body>
-<div >
-	<img class="logo-apple" src="logo-apple.png">
-</div>
+	<div >
+		<img class="logo-apple" src="logo-apple.png">
+	</div>
 	<div class="gb-conteudo">
 		<div class="bt-modo-aviao"></div>
 		<div class="som som-mais"></div>
@@ -22,9 +23,8 @@
 			<div class="loading">
 				<img src="loading.gif" style="height: 40px;">
 			</div>
-			<div class="autenticacao"></div>
-			<div class="home" hidden>
-				<div class="barra-informativa">
+			<div class="autenticacao" hidden>
+				<div class="info-hora">
 					<span class="horario">
 						<script>
 							var hora = new Date();
@@ -33,115 +33,161 @@
 							document.write(
 								((hour.length == 1) ? '0'+hour : hour) + ':' + 
 								((minute.length == 1) ? '0'+minute : minute)
-									);
-						</script>
-					</span>
-					<span class="internet">
-						<img src="wifi.png">
-					</span>
-					<span class="sinal">
-						<img src="sinal-celular.png">
-					</span>
-					<span class="bateria">
-						<img src="batery.png">
-					</span>
-				</div>
-				<div class="corpo-tela">
-					<div class="dv-jogo">
-						<button class="bt-jogo" onclick="executaJogoDaCobrinha();">
-						</button>
-						<span>Jogo</span>
+								);
+							</script>
+						</span>
+					</div>
+					<div class="info-dono-celular">Iphone de Gabriel</div>
+					<div class="out-senha">
+						<span class="senha-out"></span>
+						<span class="senha-out"></span>
+						<span class="senha-out"></span>
+						<span class="senha-out"></span>
+					</div>
+					<div class="area-efeito-teclado">
+						<div class="teclado">
+							<button class="bt-senha">1</button>
+							<button class="bt-senha">2</button>
+							<button class="bt-senha">3</button>
+							<button class="bt-senha">4</button>
+							<button class="bt-senha">5</button>
+							<button class="bt-senha">6</button>
+							<button class="bt-senha">7</button>
+							<button class="bt-senha">8</button>
+							<button class="bt-senha">1</button>
+							<button class="bt-senha limpar">Limpar</button>
+							<button class="bt-senha">0</button>
+							<button class="bt-senha entrar">Entrar</button>
+						</div>
 					</div>
 				</div>
-				<div class="menu-bts-acoes"></div>
-			</div>
-			<!-- <p id="clique-me" onclick="chamaMayquinho();" hidden><strong>Clique e veja seu futuro !</strong></p> -->
-			<div class="jogo-da-cobrinha" style="display: none;">
-				<div class="placar gols"><span>0</span></div>
-				<div class="placar defesas"><span>0</span></div>
-				<div class="bolinha" ></div>
-				<div class="cobrinha" ></div>
-				<div class="gol" ></div>
-			</div>
+				<div class="home" hidden>
+					<div class="barra-informativa">
+						<span class="horario">
+							<script>
+								var hora = new Date();
+								var hour = String(hora.getHours());
+								var minute = String(hora.getMinutes());
+								document.write(
+									((hour.length == 1) ? '0'+hour : hour) + ':' + 
+									((minute.length == 1) ? '0'+minute : minute)
+									);
+								</script>
+							</span>
+							<span class="internet">
+								<img src="wifi.png">
+							</span>
+							<span class="sinal">
+								<img src="sinal-celular.png">
+							</span>
+							<span class="bateria">
+								<img src="batery.png">
+							</span>
+						</div>
+						<div class="corpo-tela">
+							<div class="dv-jogo">
+								<button class="bt-jogo" >
+								</button>
+								<span>Jogo</span>
+							</div>
+						</div>
+						<div class="menu-bts-acoes"></div>
+					</div>
+					<!-- <p id="clique-me" onclick="chamaMayquinho();" hidden><strong>Clique e veja seu futuro !</strong></p> -->
+					<div class="jogo-da-cobrinha" style="display: none;">
+						<div class="placar gols"><span>0</span></div>
+						<div class="placar defesas"><span>0</span></div>
+						<div class="bolinha" ></div>
+						<div class="cobrinha" ></div>
+						<div class="gol" ></div>
+					</div>
 			<!-- <img id="img" style="display: none;width: 100%;height: 100% !important;position:absolute;z-index: 1;" src="img-future.jpeg">
-			<img id="img-inicial" style="display: none;height: 361px;width: 100%;" src="tela-inicial-iphone.jpg"> -->
-		</div>
-		<div class="gb-menu-acoes">
-			<div class="gb-bt-principal" onclick="voltaMenuIniciar();">
-				<!-- <div class="gb-luz-bt-principal"></div> -->
+				<img id="img-inicial" style="display: none;height: 361px;width: 100%;" src="tela-inicial-iphone.jpg"> -->
+			</div>
+			<div class="gb-menu-acoes">
+				<div class="gb-bt-principal" onclick="voltaMenuIniciar();">
+					<!-- <div class="gb-luz-bt-principal"></div> -->
+				</div>
 			</div>
 		</div>
-	</div>
-	<script>
+		<script>
 
-		KEY_DOWN = 40;
-		KEY_UP = 38;
-		KEY_LEFT = 37;
-		KEY_RIGHT = 39;
+			// var $ = jQuery;
 
-		KEY_END = 35;
-		KEY_BEGIN = 36;
+			KEY_DOWN = 40;
+			KEY_UP = 38;
+			KEY_LEFT = 37;
+			KEY_RIGHT = 39;
 
-
-		KEY_BACK_TAB = 8;
-		KEY_TAB = 9;
-		KEY_SH_TAB = 16;
-		KEY_ENTER = 13;
-		KEY_ESC = 27;
-		KEY_SPACE = 32;
-		KEY_DEL = 46;
-
-		KEY_A = 65;
-		KEY_B = 66;
-		KEY_C = 67;
-		KEY_D = 68;
-		KEY_E = 69;
-		KEY_F = 70;
-		KEY_G = 71;
-		KEY_H = 72;
-		KEY_I = 73;
-		KEY_J = 74;
-		KEY_K = 75;
-		KEY_L = 76;
-		KEY_M = 77;
-		KEY_N = 78;
-		KEY_O = 79;
-		KEY_P = 80;
-		KEY_Q = 81;
-		KEY_R = 82;
-		KEY_S = 83;
-		KEY_T = 84;
-		KEY_U = 85;
-		KEY_V = 86;
-		KEY_W = 87;
-		KEY_X = 88;
-		KEY_Y = 89;
-		KEY_Z = 90;
-
-		KEY_PF1 = 112;
-		KEY_PF2 = 113;
-		KEY_PF3 = 114;
-		KEY_PF4 = 115;
-		KEY_PF5 = 116;
-		KEY_PF6 = 117;
-		KEY_PF7 = 118;
-		KEY_PF8 = 119;
-
-		REMAP_KEY_T = 5019;
+			KEY_END = 35;
+			KEY_BEGIN = 36;
 
 
-		function initSistema(){
-			setTimeout(function() {
-				jQuery('.loading').fadeOut('7000', function(){
-					jQuery('.home').fadeIn('7000');
+			KEY_BACK_TAB = 8;
+			KEY_TAB = 9;
+			KEY_SH_TAB = 16;
+			KEY_ENTER = 13;
+			KEY_ESC = 27;
+			KEY_SPACE = 32;
+			KEY_DEL = 46;
+
+			KEY_A = 65;
+			KEY_B = 66;
+			KEY_C = 67;
+			KEY_D = 68;
+			KEY_E = 69;
+			KEY_F = 70;
+			KEY_G = 71;
+			KEY_H = 72;
+			KEY_I = 73;
+			KEY_J = 74;
+			KEY_K = 75;
+			KEY_L = 76;
+			KEY_M = 77;
+			KEY_N = 78;
+			KEY_O = 79;
+			KEY_P = 80;
+			KEY_Q = 81;
+			KEY_R = 82;
+			KEY_S = 83;
+			KEY_T = 84;
+			KEY_U = 85;
+			KEY_V = 86;
+			KEY_W = 87;
+			KEY_X = 88;
+			KEY_Y = 89;
+			KEY_Z = 90;
+
+			KEY_PF1 = 112;
+			KEY_PF2 = 113;
+			KEY_PF3 = 114;
+			KEY_PF4 = 115;
+			KEY_PF5 = 116;
+			KEY_PF6 = 117;
+			KEY_PF7 = 118;
+			KEY_PF8 = 119;
+
+			REMAP_KEY_T = 5019;
+
+
+			function initSistema(elemento){
+				setTimeout(function() {
+					jQuery('.loading').fadeOut('7000', function(){
+						jQuery('.autenticacao').fadeIn('7000');
+					})
+				}, 2000);
+			}
+
+			initSistema();
+
+			function abreHomeSistema(elementoClose){
+				jQuery(elementoClose).fadeOut('100', function(){
+					jQuery('.home').fadeIn('4000');
 				})
-			}, 2000);
-		}
+			}
 
-		initSistema();
-
-		var isCobra = false;
-		var tacarBolinhas;
+			var isCobra = false;
+			var tacarBolinhas;
 
 		// function chamaMayquinho(){
 		// 	jQuery('#clique-me').fadeOut('1000', function(){
@@ -165,13 +211,27 @@
 			
 		}
 		
+		$('.bt-jogo').jrumble({
+			x: 4,
+			y: 0,
+			rotation: 2
+		});
+
+		$('.bt-jogo').click(function(event) {
+			// $(this).trigger('startRumble');	
+			setTimeout(function(){
+				// $(this).trigger('stopRumble');
+				executaJogoDaCobrinha();
+			},1000)
+		});
+
 		function executaJogoDaCobrinha(){
 			if(jQuery('.home').is(':visible'))
-			jQuery('.home').fadeOut('1000', function(){
-				jQuery('.jogo-da-cobrinha').fadeIn('7000');	
-				jogarBolas();
-				isCobra = true;
-			});
+				jQuery('.home').fadeOut('1000', function(){
+					jQuery('.jogo-da-cobrinha').fadeIn('7000');	
+					jogarBolas();
+					isCobra = true;
+				});
 		}
 
 		function checkEventObj ( _event_ ){
@@ -181,7 +241,7 @@
 		// --- Netscape and other explorers
 		else
 			return _event_;
-		}
+	}
 
 	document.onkeydown = function(_event_){
 		if(isCobra){
@@ -244,8 +304,8 @@
 	function jogarBolas(){
 		tacarBolinhas = setInterval(function(){
 					//lança as bolinhas em direção ao gol !
-			var positionBolinha = jQuery('.bolinha').position();
-			var positionGoleiro = jQuery('.cobrinha').position();
+					var positionBolinha = jQuery('.bolinha').position();
+					var positionGoleiro = jQuery('.cobrinha').position();
 			// console.log('A posição da bola : ' + positionBolinha.top)
 			// console.log('A posição da bola : ' + positionBolinha.left)
 			// console.log('A posição do goleiro : ' + positionGoleiro.top)
@@ -254,8 +314,8 @@
 				&&
 				positionBolinha.left === (positionGoleiro.left + 2)){
 				runDefesa();
-				resetGame();
-			}
+			resetGame();
+		}
 
 			//mexe com a bola !
 			if(jQuery('.bolinha').css('top') !== '330px'){
@@ -277,12 +337,66 @@
 
 	}
 	setInterval(function() {
-			var hora = new Date();
-			var hour = String(hora.getHours());
-			var minute = String(hora.getMinutes());
+		var hora = new Date();
+		var hour = String(hora.getHours());
+		var minute = String(hora.getMinutes());
+		if( parseInt(hour) !== parseInt(jQuery('.horario').html().split(':')[0])
+			||
+			parseInt(minute) !== parseInt(jQuery('.horario').html().split(':')[1]) ){
 			jQuery('.horario').html(((hour.length == 1) ? '0'+hour : hour) + ':' + 
 				((minute.length == 1) ? '0'+minute : minute));
-		}, 1000);
+			}
+	}, 1000);
+
+
+	// Initialize jRumble on Selector
+	jQuery('.teclado').jrumble({
+		x: 4,
+		y: 0,
+		rotation: 0,
+		speed: 50
+	});
+
+	var senha = '1234';
+	var senhaDigitada = '';
+	var pos = 0;
+
+	jQuery('.teclado button').each(function(index, elemento){
+		if(elemento.innerHTML == 'Entrar' || elemento.innerHTML == 'Limpar')
+			return;
+		jQuery(elemento).click(function(){
+			senhaDigitada += this.innerHTML;
+			document.querySelectorAll('.senha-out')[pos].classList.replace('senha-out', 'senha-in')
+		})
+	})
+
+	jQuery('.entrar').click(function(){
+		// console.log(senhaDigitada)
+		if(senha == senhaDigitada)
+			abreHomeSistema('.autenticacao');
+		else{
+			$('.limpar').click();
+		}
+	});
+
+	jQuery('.limpar').click(function(){
+		// console.log(senhaDigitada)
+		senhaDigitada = '';
+		var spans = document.querySelectorAll('.senha-in');
+		spans.forEach(function(element, index) {
+			console.log(element)
+			element.classList.replace('senha-in','senha-out')
+		})
+		
+		// Start rumble on element
+		jQuery('.teclado').trigger('startRumble');
+		setTimeout(function(){
+			// Stop rumble on element
+			jQuery('.teclado').trigger('stopRumble');
+		},1000)
+
+
+	});
 </script>
 </body>
 </html>
