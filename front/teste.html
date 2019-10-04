@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- <script type="text/javascript" src="dateformat.js"></script> -->
+</head>
+<body>
+<div >
+	<img class="logo-apple" src="logo-apple.png">
+</div>
+	<div class="gb-conteudo">
+		<div class="bt-modo-aviao"></div>
+		<div class="som som-mais"></div>
+		<div class="som som-menos"></div>
+		<div class="exec-program" onclick="executaJogoDaCobrinha();" hidden></div>
+		<nav class="gb-menu-navegacao">
+			<div class="gb-som-usuario"></div>
+		</nav>
+		<div class="gb-imagem-usuario">
+			<div class="loading">
+				<img src="loading.gif" style="height: 40px;">
+			</div>
+			<div class="autenticacao"></div>
+			<div class="home" hidden>
+				<div class="barra-informativa">
+					<span class="horario">
+						<script>
+							var hora = new Date();
+							var hour = String(hora.getHours());
+							var minute = String(hora.getMinutes());
+							document.write(
+								((hour.length == 1) ? '0'+hour : hour) + ':' + 
+								((minute.length == 1) ? '0'+minute : minute)
+									);
+						</script>
+					</span>
+					<span class="internet">
+						<img src="wifi.png">
+					</span>
+					<span class="sinal">
+						<img src="sinal-celular.png">
+					</span>
+					<span class="bateria">
+						<img src="batery.png">
+					</span>
+				</div>
+				<div class="corpo-tela">
+					<div class="dv-jogo">
+						<button class="bt-jogo" onclick="executaJogoDaCobrinha();">
+						</button>
+						<span>Jogo</span>
+					</div>
+				</div>
+				<div class="menu-bts-acoes"></div>
+			</div>
+			<!-- <p id="clique-me" onclick="chamaMayquinho();" hidden><strong>Clique e veja seu futuro !</strong></p> -->
+			<div class="jogo-da-cobrinha" style="display: none;">
+				<div class="placar gols"><span>0</span></div>
+				<div class="placar defesas"><span>0</span></div>
+				<div class="bolinha" ></div>
+				<div class="cobrinha" ></div>
+				<div class="gol" ></div>
+			</div>
+			<!-- <img id="img" style="display: none;width: 100%;height: 100% !important;position:absolute;z-index: 1;" src="img-future.jpeg">
+			<img id="img-inicial" style="display: none;height: 361px;width: 100%;" src="tela-inicial-iphone.jpg"> -->
+		</div>
+		<div class="gb-menu-acoes">
+			<div class="gb-bt-principal" onclick="voltaMenuIniciar();">
+				<!-- <div class="gb-luz-bt-principal"></div> -->
+			</div>
+		</div>
+	</div>
+	<script>
+
+		KEY_DOWN = 40;
+		KEY_UP = 38;
+		KEY_LEFT = 37;
+		KEY_RIGHT = 39;
+
+		KEY_END = 35;
+		KEY_BEGIN = 36;
+
+
+		KEY_BACK_TAB = 8;
+		KEY_TAB = 9;
+		KEY_SH_TAB = 16;
+		KEY_ENTER = 13;
+		KEY_ESC = 27;
+		KEY_SPACE = 32;
+		KEY_DEL = 46;
+
+		KEY_A = 65;
+		KEY_B = 66;
+		KEY_C = 67;
+		KEY_D = 68;
+		KEY_E = 69;
+		KEY_F = 70;
+		KEY_G = 71;
+		KEY_H = 72;
+		KEY_I = 73;
+		KEY_J = 74;
+		KEY_K = 75;
+		KEY_L = 76;
+		KEY_M = 77;
+		KEY_N = 78;
+		KEY_O = 79;
+		KEY_P = 80;
+		KEY_Q = 81;
+		KEY_R = 82;
+		KEY_S = 83;
+		KEY_T = 84;
+		KEY_U = 85;
+		KEY_V = 86;
+		KEY_W = 87;
+		KEY_X = 88;
+		KEY_Y = 89;
+		KEY_Z = 90;
+
+		KEY_PF1 = 112;
+		KEY_PF2 = 113;
+		KEY_PF3 = 114;
+		KEY_PF4 = 115;
+		KEY_PF5 = 116;
+		KEY_PF6 = 117;
+		KEY_PF7 = 118;
+		KEY_PF8 = 119;
+
+		REMAP_KEY_T = 5019;
+
+
+		function initSistema(){
+			setTimeout(function() {
+				jQuery('.loading').fadeOut('7000', function(){
+					jQuery('.home').fadeIn('7000');
+				})
+			}, 2000);
+		}
+
+		initSistema();
+
+		var isCobra = false;
+		var tacarBolinhas;
+
+		// function chamaMayquinho(){
+		// 	jQuery('#clique-me').fadeOut('1000', function(){
+		// 		jQuery('#img').fadeIn('7000');
+		// 	});
+		// }
+
+		function stopGame(){
+			if(jQuery('.jogo-da-cobrinha').is(':visible')){
+				jQuery('.jogo-da-cobrinha').fadeOut('7000');
+				clearInterval(tacarBolinhas);
+				isCobra = false;
+				zerarGols();
+				zerarDefesas();
+			}
+		}
+
+		function voltaMenuIniciar(){
+			stopGame();
+			jQuery('.home').fadeIn('7000');
+			
+		}
+		
+		function executaJogoDaCobrinha(){
+			if(jQuery('.home').is(':visible'))
+			jQuery('.home').fadeOut('1000', function(){
+				jQuery('.jogo-da-cobrinha').fadeIn('7000');	
+				jogarBolas();
+				isCobra = true;
+			});
+		}
+
+		function checkEventObj ( _event_ ){
+		// --- IE explorer
+		if ( window.event )
+			return window.event;
+		// --- Netscape and other explorers
+		else
+			return _event_;
+		}
+
+	document.onkeydown = function(_event_){
+		if(isCobra){
+			var winEvt = checkEventObj(_event_);
+			var intKeyCode = winEvt.keyCode;
+			var intAltKey = winEvt.altKey;
+			var intCtrlKey = winEvt.ctrlKey;
+			if(intKeyCode == KEY_DOWN){
+				if(jQuery('.cobrinha').css('top') !== '321px')
+					jQuery('.cobrinha').css('top', parseInt(jQuery('.cobrinha').css('top').split('p')[0]) + 10);
+			}
+			if(intKeyCode == KEY_UP){
+				if(jQuery('.cobrinha').css('top') !== '301px')
+					jQuery('.cobrinha').css('top', parseInt(jQuery('.cobrinha').css('top').split('p')[0]) - 10);
+			}
+			if(intKeyCode == KEY_LEFT){
+				if(jQuery('.cobrinha').css('left') !== '10px')
+					jQuery('.cobrinha').css('left', parseInt(jQuery('.cobrinha').css('left').split('p')[0]) - 10);
+			}
+			if(intKeyCode == KEY_RIGHT){
+				if(jQuery('.cobrinha').css('left') !== '230px')
+					jQuery('.cobrinha').css('left', parseInt(jQuery('.cobrinha').css('left').split('p')[0]) + 10);
+			}
+		}
+	};
+
+	var defesas = 0;
+	var gol = 0;
+
+	function zerarGols(){
+		gol = 0;
+		jQuery('.gols span').html(gol);
+	}
+
+	function zerarDefesas(){
+		defesas = 0;
+		jQuery('.defesas span').html(defesas);
+	}
+
+	function adicionarGol(){
+		jQuery('#img').prop('src', 'img-future.jpeg');
+		jQuery('#img').fadeIn('1000', function(){
+			setTimeout(function() {
+				jQuery('#img').fadeOut('7000');
+			}, 15);
+		});
+		jQuery('.gols span').html(++gol);
+	}
+
+	function runDefesa(){
+		jQuery('#img').prop('src', 'gabigol.jpg');
+		jQuery('#img').fadeIn('1000', function(){
+			setTimeout(function() {
+				jQuery('#img').fadeOut('7000');
+			}, 20);
+		});
+		jQuery('.defesas span').html(++defesas);
+	}
+
+	function jogarBolas(){
+		tacarBolinhas = setInterval(function(){
+					//lança as bolinhas em direção ao gol !
+			var positionBolinha = jQuery('.bolinha').position();
+			var positionGoleiro = jQuery('.cobrinha').position();
+			// console.log('A posição da bola : ' + positionBolinha.top)
+			// console.log('A posição da bola : ' + positionBolinha.left)
+			// console.log('A posição do goleiro : ' + positionGoleiro.top)
+			// console.log('A posição do goleiro : ' + positionGoleiro.left)
+			if((positionBolinha.top + 6) === positionGoleiro.top
+				&&
+				positionBolinha.left === (positionGoleiro.left + 2)){
+				runDefesa();
+				resetGame();
+			}
+
+			//mexe com a bola !
+			if(jQuery('.bolinha').css('top') !== '330px'){
+				jQuery('.bolinha').css('top', parseInt(jQuery('.bolinha').css('top').split('p')[0]) + 1);
+			}//foi gol !!
+			else if(jQuery('.bolinha').css('top') >= '320px'){
+				adicionarGol();
+				resetGame();
+			}
+
+		}, 10);
+
+
+		function resetGame(){
+			clearInterval(tacarBolinhas);
+			jQuery('.bolinha').css('top', 0);
+			jogarBolas();
+		}
+
+	}
+	setInterval(function() {
+			var hora = new Date();
+			var hour = String(hora.getHours());
+			var minute = String(hora.getMinutes());
+			jQuery('.horario').html(((hour.length == 1) ? '0'+hour : hour) + ':' + 
+				((minute.length == 1) ? '0'+minute : minute));
+		}, 1000);
+</script>
+</body>
+</html>
