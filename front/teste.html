@@ -10,59 +10,23 @@
 <body>
 	<div >
 		<img class="logo-apple" src="logo-apple.png">
+		<span class="ligar">Ligar : +55 (21) 98555-6588</span>
 	</div>
-	<div class="gb-conteudo">
-		<div class="bt-modo-aviao"></div>
-		<div class="som som-mais"></div>
-		<div class="som som-menos"></div>
-		<div class="exec-program" onclick="executaJogoDaCobrinha();" hidden></div>
-		<nav class="gb-menu-navegacao">
-			<div class="gb-som-usuario"></div>
-		</nav>
-		<div class="gb-imagem-usuario">
-			<div class="loading">
-				<img src="loading.gif" style="height: 40px;">
-			</div>
-			<div class="autenticacao" hidden>
-				<div class="info-hora">
-					<span class="horario">
-						<script>
-							var hora = new Date();
-							var hour = String(hora.getHours());
-							var minute = String(hora.getMinutes());
-							document.write(
-								((hour.length == 1) ? '0'+hour : hour) + ':' + 
-								((minute.length == 1) ? '0'+minute : minute)
-								);
-							</script>
-						</span>
-					</div>
-					<div class="info-dono-celular">Iphone de Gabriel</div>
-					<div class="out-senha">
-						<span class="senha-out"></span>
-						<span class="senha-out"></span>
-						<span class="senha-out"></span>
-						<span class="senha-out"></span>
-					</div>
-					<div class="area-efeito-teclado">
-						<div class="teclado">
-							<button class="bt-senha">1</button>
-							<button class="bt-senha">2</button>
-							<button class="bt-senha">3</button>
-							<button class="bt-senha">4</button>
-							<button class="bt-senha">5</button>
-							<button class="bt-senha">6</button>
-							<button class="bt-senha">7</button>
-							<button class="bt-senha">8</button>
-							<button class="bt-senha">1</button>
-							<button class="bt-senha limpar">Limpar</button>
-							<button class="bt-senha">0</button>
-							<button class="bt-senha entrar">Entrar</button>
-						</div>
-					</div>
+	<div class="area-efeito-conteudo">
+			<div class="gb-conteudo">
+			<div class="bt-modo-aviao"></div>
+			<div class="som som-mais"></div>
+			<div class="som som-menos"></div>
+			<div class="exec-program" onclick="executaJogoDaCobrinha();" hidden></div>
+			<nav class="gb-menu-navegacao">
+				<div class="gb-som-usuario"></div>
+			</nav>
+			<div class="gb-imagem-usuario">
+				<div class="loading">
+					<img src="loading.gif" style="height: 40px;">
 				</div>
-				<div class="home" hidden>
-					<div class="barra-informativa">
+				<div class="autenticacao" hidden>
+					<div class="info-hora">
 						<span class="horario">
 							<script>
 								var hora = new Date();
@@ -74,40 +38,82 @@
 									);
 								</script>
 							</span>
-							<span class="internet">
-								<img src="wifi.png">
-							</span>
-							<span class="sinal">
-								<img src="sinal-celular.png">
-							</span>
-							<span class="bateria">
-								<img src="batery.png">
-							</span>
 						</div>
-						<div class="corpo-tela">
-							<div class="dv-jogo">
-								<button class="bt-jogo" >
-								</button>
-								<span>Jogo</span>
+						<div class="info-dono-celular">Iphone de Gabriel</div>
+						<div class="out-senha">
+							<span class="senha-out"></span>
+							<span class="senha-out"></span>
+							<span class="senha-out"></span>
+							<span class="senha-out"></span>
+						</div>
+						<div class="area-efeito-teclado">
+							<div class="teclado">
+								<button class="bt-senha">1</button>
+								<button class="bt-senha">2</button>
+								<button class="bt-senha">3</button>
+								<button class="bt-senha">4</button>
+								<button class="bt-senha">5</button>
+								<button class="bt-senha">6</button>
+								<button class="bt-senha">7</button>
+								<button class="bt-senha">8</button>
+								<button class="bt-senha">1</button>
+								<button class="bt-senha limpar">Limpar</button>
+								<button class="bt-senha">0</button>
+								<button class="bt-senha entrar">Entrar</button>
 							</div>
 						</div>
-						<div class="menu-bts-acoes"></div>
 					</div>
-					<!-- <p id="clique-me" onclick="chamaMayquinho();" hidden><strong>Clique e veja seu futuro !</strong></p> -->
-					<div class="jogo-da-cobrinha" style="display: none;">
-						<div class="placar gols"><span>0</span></div>
-						<div class="placar defesas"><span>0</span></div>
-						<div class="bolinha" ></div>
-						<div class="cobrinha" ></div>
-						<div class="gol" ></div>
-					</div>
-			<!-- <img id="img" style="display: none;width: 100%;height: 100% !important;position:absolute;z-index: 1;" src="img-future.jpeg">
-				<img id="img-inicial" style="display: none;height: 361px;width: 100%;" src="tela-inicial-iphone.jpg"> -->
-			</div>
-			<div class="gb-menu-acoes">
-				<div class="gb-bt-principal" onclick="voltaMenuIniciar();">
-					<!-- <div class="gb-luz-bt-principal"></div> -->
+					<div class="home tela" hidden>
+						<div class="barra-informativa">
+							<span class="horario">
+								<script>
+									var hora = new Date();
+									var hour = String(hora.getHours());
+									var minute = String(hora.getMinutes());
+									document.write(
+										((hour.length == 1) ? '0'+hour : hour) + ':' + 
+										((minute.length == 1) ? '0'+minute : minute)
+										);
+									</script>
+								</span>
+								<span class="internet">
+									<img src="wifi.png">
+								</span>
+								<span class="sinal">
+									<img src="sinal-celular.png">
+								</span>
+								<span class="bateria">
+									<img src="batery.png">
+								</span>
+							</div>
+							<div class="corpo-tela">
+								<div class="dv-jogo">
+									<button class="bt-jogo" >
+									</button>
+									<span>Jogo</span>
+								</div>
+							</div>
+							<div class="menu-bts-acoes"></div>
+						</div>
+						<!-- <p id="clique-me" onclick="chamaMayquinho();" hidden><strong>Clique e veja seu futuro !</strong></p> -->
+						<div class="jogo-da-cobrinha tela" style="display: none;">
+							<div class="placar gols"><span>0</span></div>
+							<div class="placar defesas"><span>0</span></div>
+							<div class="bolinha" ></div>
+							<div class="cobrinha" ></div>
+							<div class="gol" ></div>
+						</div>
+				<!-- <img id="img" style="display: none;width: 100%;height: 100% !important;position:absolute;z-index: 1;" src="img-future.jpeg">
+					<img id="img-inicial" style="display: none;height: 361px;width: 100%;" src="tela-inicial-iphone.jpg"> -->
 				</div>
+				<div class="gb-menu-acoes">
+					<div class="gb-bt-principal" onclick="voltaMenuIniciar();">
+						<!-- <div class="gb-luz-bt-principal"></div> -->
+					</div>
+				</div>
+			</div>
+			<div class="tela tela-ligacao">
+				
 			</div>
 		</div>
 		<script>
@@ -169,6 +175,28 @@
 
 			REMAP_KEY_T = 5019;
 
+
+			function bloqueiaCelular(){
+				$('.tela').each(function(index, el) {
+					jQuery(el).fadeOut('7000', function(){
+						jQuery('.autenticacao').fadeIn('7000');
+						vibraCelular();
+						$('.limpar').click();
+					})
+				});
+			}
+
+			function vibraCelular(){
+				$('.gb-conteudo').jrumble({
+					x: 2,
+					y: 2,
+					rotation: 1
+				});
+				$('.gb-conteudo').trigger('startRumble');
+				setTimeout(function(){
+					$('.gb-conteudo').trigger('stopRumble');
+				},1000);
+			}
 
 			function initSistema(elemento){
 				setTimeout(function() {
@@ -384,7 +412,6 @@
 		senhaDigitada = '';
 		var spans = document.querySelectorAll('.senha-in');
 		spans.forEach(function(element, index) {
-			console.log(element)
 			element.classList.replace('senha-in','senha-out')
 		})
 		
@@ -397,6 +424,18 @@
 
 
 	});
+
+	$('.logo-apple').click(function(){
+		if($('.gb-conteudo').css('transform') == 'none')
+			$('.gb-conteudo').css('transform', 'rotate(89.5deg)')
+		else
+			$('.gb-conteudo').css('transform', '')
+
+	})
+
+	$('.bt-modo-aviao').click(function(){
+		bloqueiaCelular();
+	})
 </script>
 </body>
 </html>

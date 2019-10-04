@@ -1,15 +1,15 @@
 .gb-conteudo{
     width: 260px;
-    /*height: 492px;*/
+    /* height: 492px; */
     height: 489px;
     background: #1d1c1c;
     position: absolute;
-    left: 42%;
+    /* left: 42%; */
     /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
     /* right: 50%; */
-    top: 5%;
+    /* top: 5%; */
     border-radius: 31px;
     border: 6px double #6f6c69bf !important;
     box-shadow: 17px 20px 20px 2px #000000;
@@ -379,7 +379,7 @@ body{
     position: absolute;
     top: 120px;
     /* left: 76px; */
-    color: greenyellow;
+    color: white;
     font-size: small;
     font-family: sans-serif;
     width: 100%;
@@ -429,3 +429,29 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.area-efeito-conteudo{
+    width: 25%;
+    height: 570px;
+    position: absolute;
+    top: 5%;
+    left: 42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ligar{
+    color: white;
+    font-size: larger;
+    height: 26px;
+    width: 244px;
+    position: absolute;
+    left: 95px;
+    top: 103px;
+    cursor: pointer;
+}
+
