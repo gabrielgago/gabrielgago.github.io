@@ -305,9 +305,9 @@ body{
     width: 4px;
     height: 28px;
     position: absolute;
-    left: -9px;
+    left: -15px;
     background: #7d7979;
-    top: 60px;
+    top: 0px;
     box-sizing: border-box;
     border-radius: 11px 0 0 11px;
 }
@@ -478,8 +478,23 @@ body{
     align-items: center;
 }
 
-.lb-ligando{
+.lb-ligando div{
+    height: 70%;
+    width: 70%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lb-ligando{
+    top: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 26%;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -490,3 +505,26 @@ body{
     margin: 21px;
     background-color: #cacaca;
 }
+
+.lb-qm-m-liga-apelido{
+    position: absolute;
+    top: 47px;
+    left: 83px;
+    font-size: smaller;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.lb-qm-m-liga{
+    display: block; 
+    position: absolute;
+    top: 27px;
+    left: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
