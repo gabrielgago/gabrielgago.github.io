@@ -388,6 +388,19 @@ body{
     align-items: center;
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#teclado:target{
+    animation-name: vibracal;
+    animation-duration: 3s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+    /* animation-timing-function: ease; */
+}
+
 .out-senha{
     top: 157px;
     height: 26px;
@@ -442,7 +455,15 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    animation-name: vibracal;
+    animation-duration: 5s;
+    /* animation-iteration-count: 2; */
+    /* animation-direction: alternate; */
+    animation-timing-function: ease;
+    /* animation-delay: 5s; */
 }
+
+
 
 .ligar{
     color: white;
@@ -487,7 +508,7 @@ body{
 }
 
 .lb-ligando{
-    top: 0;
+    top: 20px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -496,6 +517,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
 }
 
 .fundo-foto-usuario{
@@ -525,6 +547,51 @@ body{
     padding: 0;
 }
 
+.dv-img-lem-msg{
+    position: absolute;
+    top: 60%;
+    margin: 8px;
+    font-size: small;
+}
 
+.lembre-me{
+    left: 50px
+}
 
+.msg{
+    right: 50px
+}
 
+.dv-ac-rej-ligacao{
+    position: absolute;
+    top: 297px;
+    margin: 7px;
+    box-sizing: border-box;
+    font-size: small;
+}
+
+.rejeitar{
+    left: 50px
+}
+
+.aceitar{
+    right: 50px
+}
+
+@keyframes fadein{
+    from{
+        left:0px;
+    }
+    to{
+        left:42%;
+    }
+}
+
+@keyframes vibracal{
+    from{
+        left:0px;
+    }
+    to{
+        left:42%;
+    }
+}
