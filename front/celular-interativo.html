@@ -405,9 +405,16 @@
 	var pos = 0;
 
 	jQuery('.teclado button').each(function(index, elemento){
-		if(elemento.innerHTML == 'Entrar' || elemento.innerHTML == 'Limpar')
+		elemento = $(elemento);
+		if(elemento.children() != null
+		&& elemento.children() != ''
+		&& elemento.children() != 'undefined'
+		&& elemento.children() != undefined
+		&& elemento.children().length > 0){
+			if(elemento.children().html() == 'Entrar' || elemento.children().html() == 'Limpar')
 			return;
-		jQuery(elemento).click(function(){
+		}
+		elemento.click(function(){
 			senhaDigitada += this.innerHTML;
 			document.querySelectorAll('.senha-out')[pos].classList.replace('senha-out', 'senha-in')
 		})
