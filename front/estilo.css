@@ -616,7 +616,7 @@ aside button{
     color: white;
     font-size: medium;
     margin-left: 5%;
-    transition: 1s;
+    transition: 0.5s;
     opacity: 0.6;
 }
 
@@ -639,10 +639,22 @@ ul li{
 
 #ul-receber-ligacoes:target{
     display: inline-block;
+    transition: 1s;
+    /* animation-name: abre-sub-menu;
+    animation-direction: 2s; */
 }
 
 #ul-operacoes-celular:target{
     display: inline-block;
+}
+
+@keyframes abre-sub-menu{
+    from{
+        display: none;
+    }
+    to{
+        display: inline-block;
+    }
 }
 
 @keyframes fadein{
