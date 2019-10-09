@@ -580,6 +580,71 @@ a{
     right: 50px
 }
 
+aside{
+    position: absolute;
+    height: 70%;
+    top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    background-color: #6d6565a6;
+    color: aliceblue;
+    width: 270px;
+}
+
+.dv-close-menu-lateral{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    margin: 15px;display: flex;
+    background-color: #0000008c;
+    border: 1px solid;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: #f9b0b0 !important;
+    font-size: xx-small;
+}
+
+aside button{
+    border: none;
+    background: none;
+    width: 90%;
+    height: 55px;
+    background-color: darkcyan;
+    color: white;
+    font-size: medium;
+    margin-left: 5%;
+    transition: 1s;
+    opacity: 0.6;
+}
+
+aside button:hover{
+    opacity: 1;
+    font-weight: bold
+}
+
+ul{
+    margin: 0px 0px 10px 0px;
+    padding: 16px;
+    font-size: smaller;
+}
+
+ul li{
+    list-style-type: none;
+    margin: 8px;
+    cursor: pointer;
+}
+
+#ul-receber-ligacoes:target{
+    display: inline-block;
+}
+
+#ul-operacoes-celular:target{
+    display: inline-block;
+}
+
 @keyframes fadein{
     from{
         left:0px;
