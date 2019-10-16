@@ -683,16 +683,22 @@ ul li{
     justify-content: center;
     align-items: center;
     text-align: right;
+    margin-bottom: 9px;
     /* padding: 12px 0 0 0; */
 }
 
 .dv-logo{
-    height: 173px;
+    /* height: 173px; */
+    height: 153px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: xx-large;
     font-family: sans-serif;
+}
+
+.dv-jogo img{
+    width: 160px;
 }
 
 .dv-logo span{
