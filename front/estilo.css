@@ -688,13 +688,22 @@ ul li{
 }
 
 .dv-logo{
-    /* height: 173px; */
     height: 153px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: xx-large;
     font-family: sans-serif;
+}
+
+.dv-logo img{
+    width: 100px;
+}
+
+input[class=in-usuario]:focus, input[class=in-senha]:focus{
+    outline-offset: none !important;
+    outline:none ;
 }
 
 .dv-jogo img{
@@ -743,12 +752,15 @@ ul li{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 1s;
+    transition: 0.5s;
     background: #FD1641.6;
     font-size: larger;
     box-shadow: 0px 0px 2px;
 }
 
+.dv-sign-in a:hover{
+    background: #FD1641;
+}
 
 .dv-ainda-n-tem-conta{
     font-size: x-small;

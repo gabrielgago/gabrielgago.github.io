@@ -188,7 +188,7 @@
 							<span>Jogo</span>
 						</div>
 						<div class="dv-app-mercadinho">
-							<button class="bt-mercadinho">
+							<button class="bt-mercadinho" onclick="abreAppMercadinho();">
 							</button>
 							<span>Logo Sistema</span>
 						</div>
@@ -272,6 +272,10 @@
 
 		REMAP_KEY_T = 5019;
 
+
+		function abreAppMercadinho(){
+			jQuery('.exec-app-mercadinho').fadeIn('4000');
+		}
 
 		function bloqueiaCelular() {
 			$('.tela').each(function (index, el) {
