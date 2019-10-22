@@ -854,10 +854,15 @@ body{
 
 .preco-refeicao{
     margin: 0;
+    font-weight: bold;
+}
+
+.preco-refeicao p{
+    opacity: 1;
 }
 
 .quadro-refeicao{
-    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 1);
+    /* box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 1); */
     margin: 3px;
     padding: 5px;
 }
