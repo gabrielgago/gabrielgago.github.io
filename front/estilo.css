@@ -667,6 +667,62 @@ ul li{
     font-size: 11px;
 }
 
+.exec-app-mercadinho-escolha-qntd{
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    /* background: -webkit-linear-gradient(90deg, rgba(255,80,115,1) 0%, rgba(227,45,83,1) 44%, rgba(179,40,71,1) 100%); */
+    color: white;
+    font-size: 11px;
+    z-index: 99999999;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.exec-app-mercadinho-escolha-qntd::after{
+    content: "";
+    display: flex;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(90deg, rgba(255,80,115,1) 0%, rgba(227,45,83,1) 44%, rgba(179,40,71,1) 100%);
+    color: white;
+    font-size: 11px;
+    opacity: 0.8;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.exec-app-mercadinho-escolha-qntd input[type=number]{
+    position: absolute;
+    outline: none;
+    border: none;
+    width: 86px;
+    height: 31px;
+    border-radius: 50px 50px 50px 50px;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 10px;
+    position: absolute;
+    left: 50px;
+ }
+
+
+ .exec-app-mercadinho-escolha-qntd input[type=button]{
+    position: absolute;
+    right: 50px;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    border: none;
+    background: #91e2c7;
+ }
+ 
+
 .dv-img-seta-voltar{
     display: inline-block
 }
@@ -704,6 +760,9 @@ ul li{
 input[class=in-usuario]:focus, input[class=in-senha]:focus{
     outline-offset: none !important;
     outline:none ;
+    box-shadow: inset 1px 0px 13px 0px #c92a4c;
+    text-align: center;
+    border-radius: 0px;
 }
 
 .dv-jogo img{
