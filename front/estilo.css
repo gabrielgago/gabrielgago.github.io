@@ -64,7 +64,6 @@ body{
 .gb-bt-principal{
 	width: 45px;
     height: 45px;
-    /* background: black; */
     border: 2px solid #6f6c69bf;
     border-radius: 30px;
     left: 107px;
@@ -73,12 +72,17 @@ body{
     cursor: pointer;
     background: black;
     box-shadow: inset 4px 1px 2px 0px #1d1c1c;  
-    opacity: 0.5;
-    transition: 0.5s
+    opacity: 0.6;
+    transition: 0.1s
 }
 
 .gb-bt-principal:hover{
+    opacity: 0.3;
+}
+
+.gb-bt-principal:active{
     opacity: 1;
+    box-shadow: inset 0 0 6px 6px #1d1c1c;
 }
 
 .gb-som-usuario{
@@ -270,12 +274,22 @@ body{
     border-radius: 6px;
     margin: 10px;
     cursor: pointer;
-    opacity: 0.5;
-    transition: 0.5s;
+    opacity: 0.6;
+    transition: 0.2s;
 }
 
 .bt-jogo:hover, .bt-mercadinho:hover{
-    opacity: 1.0;
+    opacity: .3;
+}
+
+.bt-jogo:active, .bt-mercadinho:active{
+    opacity: 1;
+    box-shadow: inset 0 0 9px 0px #292929;
+    outline: none;
+}
+
+.bt-jogo:focus, .bt-mercadinho:focus{
+    outline: none;
 }
 
 .dv-jogo span, .dv-app-mercadinho span{
@@ -671,8 +685,82 @@ ul li{
     font-size: 11px;
 }
 
+<<<<<<< HEAD
 .home-app{
     display: none !important;
+=======
+.exec-app-mercadinho-escolha-qntd{
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    /* background: -webkit-linear-gradient(90deg, rgba(255,80,115,1) 0%, rgba(227,45,83,1) 44%, rgba(179,40,71,1) 100%); */
+    color: white;
+    font-size: 11px;
+    z-index: 99999999;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.exec-app-mercadinho-escolha-qntd::after{
+    content: "";
+    display: flex;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(90deg, rgba(255,80,115,1) 0%, rgba(227,45,83,1) 44%, rgba(179,40,71,1) 100%);
+    color: white;
+    font-size: 11px;
+    opacity: 0.8;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.exec-app-mercadinho-escolha-qntd input[type=number]{
+    position: absolute;
+    outline: none;
+    border: none;
+    width: 86px;
+    height: 31px;
+    border-radius: 50px 50px 50px 50px;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 10px;
+    position: absolute;
+    left: 50px;
+ }
+
+
+ .exec-app-mercadinho-escolha-qntd input[type=button]{
+    position: absolute;
+    right: 50px;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background: #33d656;
+    color: white;
+    font-size: x-large;
+    box-shadow: 2px 2px 5px 0px black;
+    border: 1px solid white;
+    transition: 1s;
+ }
+
+
+.exec-app-mercadinho-escolha-qntd input[type=button]:hover{
+    opacity: 0.8;
+}
+
+.exec-app-mercadinho-escolha-qntd input[type=button]:active{
+    opacity: 1;
+    box-shadow: inset 0px 1px 5px 0px black;
+}
+
+.exec-app-mercadinho-escolha-qntd input[type=button]:focus{
+    outline: none;
+>>>>>>> 6ecfd05ab9e156eaf15f4e744d2b1bb13a3adf03
 }
 
 .dv-img-seta-voltar{
@@ -712,6 +800,9 @@ ul li{
 input[class=in-usuario]:focus, input[class=in-senha]:focus{
     outline-offset: none !important;
     outline:none ;
+    box-shadow: inset 1px 0px 13px 0px #c92a4c;
+    text-align: center;
+    border-radius: 0px;
 }
 
 .dv-jogo img{
@@ -756,18 +847,29 @@ input[class=in-usuario]:focus, input[class=in-senha]:focus{
     height: 36px;
     border: 1px solid;
     border-radius: 50px 50px 50px 50px;
-    /* text-align: center; */
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     transition: 0.3s;
     background: #FD1641.6;
+=======
+    transition: 0.2s;
+    background: rgb(246, 69, 105);
+>>>>>>> 6ecfd05ab9e156eaf15f4e744d2b1bb13a3adf03
     font-size: larger;
     box-shadow: 0px 0px 2px;
 }
 
 .dv-sign-in a:hover{
-    background: #FD1641;
+    opacity: 0.5;
+    background: rgb(246, 69, 105);
+}
+
+.dv-sign-in a:active{
+    opacity: 1;
+    background: rgb(246, 69, 105);
+    box-shadow: inset 0 0 13px 3px #9e1616;
 }
 
 .dv-ainda-n-tem-conta{
@@ -802,6 +904,7 @@ body{
     font-weight: 300
 }
 
+<<<<<<< HEAD
 .container-img-descricao-preco{
     display: flex;
     width: 100%;
@@ -834,6 +937,83 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+=======
+.exec-app-mercadinho-home{
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(90deg, rgba(255,80,115,1) 0%, rgba(227,45,83,1) 44%, rgba(179,40,71,1) 100%);
+    color: white;
+    font-size: 11px;
+    z-index: 9999999;
+}
+
+.exec-app-mercadinho-home::-webkit-scrollbar
+{
+    width: 0px;
+    background-color: #F5F5F5;
+}
+
+.exec-app-mercadinho-home .img-refeicao img{
+    width: 75%;
+    border-radius: 50%;
+    height: 180px;
+    border: 2.6px solid white;
+    display: block;
+    box-sizing: border-box;
+}
+
+.img-refeicao{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 8px 0 0 0; */
+}
+
+.descricao-refeicao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: small;
+    height: 19px;
+    margin: 5px 0 0 0;
+}
+
+.descricao-refeicao p{
+    margin: 0;
+}
+
+.preco-refeicao{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    margin: 0;
+    height: 27px;
+}
+
+.preco-refeicao{
+    margin: 0;
+    font-weight: bold;
+}
+
+.preco-refeicao p{
+    opacity: 1;
+}
+
+.quadro-refeicao{
+    /* box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 1); */
+    margin: 3px;
+    padding: 5px;
+}
+
+.quadro-refeicao:hover{
+    background: rgba(179,40,71,1);
+>>>>>>> 6ecfd05ab9e156eaf15f4e744d2b1bb13a3adf03
 }
 
 @keyframes abre-sub-menu{
