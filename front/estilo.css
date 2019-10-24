@@ -192,10 +192,6 @@ body{
     position: absolute;
 }
 
-.loading img{
-    height: 27px !important;
-}
-
 .home{
     width: 100%;
     height: 100%;
@@ -685,10 +681,6 @@ ul li{
     font-size: 11px;
 }
 
-<<<<<<< HEAD
-.home-app{
-    display: none !important;
-=======
 .exec-app-mercadinho-escolha-qntd{
     display: flex;
     overflow: auto;
@@ -760,7 +752,6 @@ ul li{
 
 .exec-app-mercadinho-escolha-qntd input[type=button]:focus{
     outline: none;
->>>>>>> 6ecfd05ab9e156eaf15f4e744d2b1bb13a3adf03
 }
 
 .dv-img-seta-voltar{
@@ -850,13 +841,8 @@ input[class=in-usuario]:focus, input[class=in-senha]:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
-    transition: 0.3s;
-    background: #FD1641.6;
-=======
     transition: 0.2s;
     background: rgb(246, 69, 105);
->>>>>>> 6ecfd05ab9e156eaf15f4e744d2b1bb13a3adf03
     font-size: larger;
     box-shadow: 0px 0px 2px;
 }
@@ -904,40 +890,7 @@ body{
     font-weight: 300
 }
 
-<<<<<<< HEAD
-.container-img-descricao-preco{
-    display: flex;
-    width: 100%;
-    height: 50%;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-comida{
-    width: 100%;
-    height: 100%;
-}
-
-.img-comida img{
-    width: 110px;
-    border-radius: 60px;
-    height: 110px;
     display: block;
-    left: 68px;
-    position: relative;
-}
-
-.descricao-comida{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.preco-comida{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-=======
 .exec-app-mercadinho-home{
     display: block;
     overflow: auto;
@@ -1013,7 +966,6 @@ body{
 
 .quadro-refeicao:hover{
     background: rgba(179,40,71,1);
->>>>>>> 6ecfd05ab9e156eaf15f4e744d2b1bb13a3adf03
 }
 
 @keyframes abre-sub-menu{
