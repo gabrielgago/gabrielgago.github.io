@@ -188,6 +188,10 @@ body{
     position: absolute;
 }
 
+.loading img{
+    height: 27px !important;
+}
+
 .home{
     width: 100%;
     height: 100%;
@@ -667,6 +671,10 @@ ul li{
     font-size: 11px;
 }
 
+.home-app{
+    display: none !important;
+}
+
 .dv-img-seta-voltar{
     display: inline-block
 }
@@ -752,7 +760,7 @@ input[class=in-usuario]:focus, input[class=in-senha]:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
+    transition: 0.3s;
     background: #FD1641.6;
     font-size: larger;
     box-shadow: 0px 0px 2px;
@@ -792,6 +800,40 @@ input[class=in-usuario]:focus, input[class=in-senha]:focus{
 body{
     font-family: roboto;
     font-weight: 300
+}
+
+.container-img-descricao-preco{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-comida{
+    width: 100%;
+    height: 100%;
+}
+
+.img-comida img{
+    width: 110px;
+    border-radius: 60px;
+    height: 110px;
+    display: block;
+    left: 68px;
+    position: relative;
+}
+
+.descricao-comida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preco-comida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes abre-sub-menu{

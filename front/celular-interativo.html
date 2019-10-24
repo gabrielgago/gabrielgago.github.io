@@ -60,30 +60,7 @@
 			</nav>
 			<div class="gb-imagem-usuario">
 				<div class="bt-modo-aviao"></div>
-				<!-- <div class="tela tela-ligacao" hidden>
-					<div class="lb-ligando">
-						<div>
-							<strong class="lb-qm-m-liga">Mayquinho</strong>
-							<span class="lb-qm-m-liga-apelido">chupa cú</span>
-						</div>
-					</div>
-					<div class="dv-img-lem-msg lembre-me"><img src="" class="img-lembre-me"><small>Lembre-me</small>
-					</div>
-					<div class="dv-img-lem-msg msg"><img src="" class="img-msg"><small>Mensagem</small></div>
-					<div class="dv-ac-rej-ligacao rejeitar">
-						<div class="img-rejeitar-ligacao"></div><small><span>Recusar</span></small>
-					</div>
-					<div class="dv-ac-rej-ligacao aceitar">
-						<div class="img-aceitar-ligacao"></div><small><span>Aceitar</span></small>
-					</div>
-					comentar esta linha !! <div class="fundo-foto-usuario">
-							<div class="foto-usuario">
-								<img src="img-future.jpeg" alt="">
-							</div>
-						</div>
-						<div class="lb-ligando">Ligando...</div> -->
-				<!-- </div> -->
-				<div class="exec-app-mercadinho" onclick="executaAppMercadinho();" style="display: none">
+					<div class="exec-app-mercadinho" onclick="executaAppMercadinho();" style="display: none">
 					<div class="dv-header-app-mercadinho">
 						<div class="dv-img-seta-voltar"> 
 							<img src="seta-sair.png" alt="">
@@ -107,7 +84,7 @@
 						</div>
 					</div>
 					<div class="dv-sign-in">
-						<a class="a-in-app-mercadinho">
+						<a class="a-in-app-mercadinho" onclick="abreHomeAppMercadinho();">
 							Entrar
 						</a>
 					</div>
@@ -116,6 +93,30 @@
 							Ainda nao possui uma conta? <i>Cadastre-se</i>
 						</span>
 					</div>
+				</div>
+				<!-- Corpo App Mercadinho -->
+				<div class="exec-app-mercadinho home-app">
+					<div class="container-img-descricao-preco">
+						<div class="img-comida">
+							<img src="comida-cazeira.png" alt="comida-cazeira">
+							<div class="descricao-comida">Almoço para 2 pessoas, 300g de carne mal passada e filé de alho poró.</div>
+							<div class="preco-comida">R$ 33.000,00</div>
+						</div>
+					</div>
+					<!-- <div class="container-img-descricao-preco">
+						<div class="img-comida">
+							<img src="comida-cazeira.png" alt="comida-cazeira">
+						</div>
+						<div class="descricao-comida"></div>
+						<div class="preco-comida"></div>
+					</div>
+					<div class="container-img-descricao-preco">
+						<div class="img-comida">
+							<img src="comida-cazeira.png" alt="comida-cazeira">
+						</div>
+						<div class="descricao-comida"></div>
+						<div class="preco-comida"></div>
+					</div> -->
 				</div>
 				<div class="loading">
 					<img src="loading.gif" style="height: 40px;">
@@ -275,6 +276,12 @@
 
 		function abreAppMercadinho(){
 			jQuery('.exec-app-mercadinho').fadeIn('4000');
+		}
+
+		function abreHomeAppMercadinho(){
+			jQuery('.exec-app-mercadinho').fadeOut('4000', function(){
+				jQuery('.home-app').fadeIn('4000');
+			});
 		}
 
 		function bloqueiaCelular() {
