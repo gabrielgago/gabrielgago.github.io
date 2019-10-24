@@ -64,7 +64,6 @@ body{
 .gb-bt-principal{
 	width: 45px;
     height: 45px;
-    /* background: black; */
     border: 2px solid #6f6c69bf;
     border-radius: 30px;
     left: 107px;
@@ -73,12 +72,17 @@ body{
     cursor: pointer;
     background: black;
     box-shadow: inset 4px 1px 2px 0px #1d1c1c;  
-    opacity: 0.5;
-    transition: 0.5s
+    opacity: 0.6;
+    transition: 0.1s
 }
 
 .gb-bt-principal:hover{
+    opacity: 0.3;
+}
+
+.gb-bt-principal:active{
     opacity: 1;
+    box-shadow: inset 0 0 6px 6px #1d1c1c;
 }
 
 .gb-som-usuario{
@@ -266,12 +270,22 @@ body{
     border-radius: 6px;
     margin: 10px;
     cursor: pointer;
-    opacity: 0.5;
-    transition: 0.5s;
+    opacity: 0.6;
+    transition: 0.2s;
 }
 
 .bt-jogo:hover, .bt-mercadinho:hover{
-    opacity: 1.0;
+    opacity: .3;
+}
+
+.bt-jogo:active, .bt-mercadinho:active{
+    opacity: 1;
+    box-shadow: inset 0 0 9px 0px #292929;
+    outline: none;
+}
+
+.bt-jogo:focus, .bt-mercadinho:focus{
+    outline: none;
 }
 
 .dv-jogo span, .dv-app-mercadinho span{
@@ -718,10 +732,27 @@ ul li{
     width: 39px;
     height: 39px;
     border-radius: 50%;
-    border: none;
-    background: #91e2c7;
+    background: #33d656;
+    color: white;
+    font-size: x-large;
+    box-shadow: 2px 2px 5px 0px black;
+    border: 1px solid white;
+    transition: 1s;
  }
- 
+
+
+.exec-app-mercadinho-escolha-qntd input[type=button]:hover{
+    opacity: 0.8;
+}
+
+.exec-app-mercadinho-escolha-qntd input[type=button]:active{
+    opacity: 1;
+    box-shadow: inset 0px 1px 5px 0px black;
+}
+
+.exec-app-mercadinho-escolha-qntd input[type=button]:focus{
+    outline: none;
+}
 
 .dv-img-seta-voltar{
     display: inline-block
@@ -807,18 +838,24 @@ input[class=in-usuario]:focus, input[class=in-senha]:focus{
     height: 36px;
     border: 1px solid;
     border-radius: 50px 50px 50px 50px;
-    /* text-align: center; */
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.5s;
-    background: #FD1641.6;
+    transition: 0.2s;
+    background: rgb(246, 69, 105);
     font-size: larger;
     box-shadow: 0px 0px 2px;
 }
 
 .dv-sign-in a:hover{
-    background: #FD1641;
+    opacity: 0.5;
+    background: rgb(246, 69, 105);
+}
+
+.dv-sign-in a:active{
+    opacity: 1;
+    background: rgb(246, 69, 105);
+    box-shadow: inset 0 0 13px 3px #9e1616;
 }
 
 .dv-ainda-n-tem-conta{

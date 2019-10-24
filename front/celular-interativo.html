@@ -85,7 +85,7 @@
 				<!-- </div> -->
 				<div class="exec-app-mercadinho" onclick="executaAppMercadinho();" style="display: none">
 					<div class="dv-header-app-mercadinho">
-						<div class="dv-img-seta-voltar"> 
+						<div class="dv-img-seta-voltar">
 							<img src="seta-sair.png" alt="">
 						</div>
 						<div class="dv-app-mercadinho-login">
@@ -119,37 +119,63 @@
 				</div>
 				<div class="exec-app-mercadinho-home" style="display: none">
 					<div class="container-back-descricao-page">
-						<div class="dv-img-seta-voltar"> 
-								<img src="seta-sair.png" alt="">
-							</div>
-							<div class="dv-app-mercadinho-login">
-								<span class="sp-login">Lista de produtos</span>
+						<div class="dv-img-seta-voltar">
+							<img src="seta-sair.png" alt="">
+						</div>
+						<div class="dv-app-mercadinho-login">
+							<span class="sp-login">Lista de produtos</span>
+						</div>
+					</div>
+					<div class="container-carrinho">
+						<div class="dv-img-seta-voltar">
+							<img src="seta-sair.png" alt="">
+						</div>
+						<div class="dv-app-mercadinho-login">
+							<span class="sp-login">
+								x refeições selecionadas
+							</span>
 						</div>
 					</div>
 					<div class="quadro-refeicao">
 						<div class="img-refeicao"><img src="hamburguer.jpg" alt=""></div>
-						<div class="descricao-refeicao"><p>Hamburguer bovino</p></div>
-						<div class="preco-refeicao"><p>R$ 74,32</p></div>
+						<div class="descricao-refeicao">
+							<p>Hamburguer bovino</p>
+						</div>
+						<div class="preco-refeicao">
+							<p>R$ 74,32</p>
+						</div>
 					</div>
 					<div class="quadro-refeicao">
-							<div class="img-refeicao"><img src="pizza.png" alt=""></div>
-							<div class="descricao-refeicao"><p>Pizza roleira</p></div>
-							<div class="preco-refeicao"><p>R$ 79,00</p></div>
+						<div class="img-refeicao"><img src="pizza.png" alt=""></div>
+						<div class="descricao-refeicao">
+							<p>Pizza roleira</p>
+						</div>
+						<div class="preco-refeicao">
+							<p>R$ 79,00</p>
+						</div>
 					</div>
 					<div class="quadro-refeicao">
-							<div class="img-refeicao"><img src="hamburguer.jpg" alt=""></div>
-							<div class="descricao-refeicao"><p>Mostieira dozeira</p></div>
-							<div class="preco-refeicao"><p>R$ 33,00</p></div>
+						<div class="img-refeicao"><img src="hamburguer.jpg" alt=""></div>
+						<div class="descricao-refeicao">
+							<p>Mostieira dozeira</p>
+						</div>
+						<div class="preco-refeicao">
+							<p>R$ 33,00</p>
+						</div>
 					</div>
 					<div class="quadro-refeicao">
-							<div class="img-refeicao"><img src="pizza.png" alt=""></div>
-							<div class="descricao-refeicao"><p>Buticho mazeira</p></div>
-							<div class="preco-refeicao"><p>R$ 899,00</p></div>
+						<div class="img-refeicao"><img src="pizza.png" alt=""></div>
+						<div class="descricao-refeicao">
+							<p>Buticho mazeira</p>
+						</div>
+						<div class="preco-refeicao">
+							<p>R$ 899,00</p>
+						</div>
 					</div>
 				</div>
 				<div class="exec-app-mercadinho-escolha-qntd" style="display: none">
 					<input type="number">
-					<input type="button">
+					<input type="button" value="X">
 					<i class="fas fa-piggy-bank"></i>
 				</div>
 				<div class="loading">
@@ -308,7 +334,7 @@
 		REMAP_KEY_T = 5019;
 
 
-		function abreAppMercadinho(){
+		function abreAppMercadinho() {
 			jQuery('.exec-app-mercadinho').fadeIn('4000');
 		}
 
